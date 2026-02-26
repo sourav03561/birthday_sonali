@@ -1652,3 +1652,36 @@ audio {
     		-webkit-transform: scale(0.9);
     	}
     }*/
+/* ===== Handwritten Birthday Text Style ===== */
+
+.message p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;              /* pure black like image */
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-align: center;
+
+  /* soft ink feel */
+  text-shadow: 
+    1px 1px 0 rgba(0,0,0,0.08),
+    2px 2px 0 rgba(0,0,0,0.05);
+}
+
+/* Final birthday line – extra bold */
+.message p strong {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .message p {
+    font-size: 24px;
+  }
+
+  .message p strong {
+    font-size: 30px;
+  }
+}
