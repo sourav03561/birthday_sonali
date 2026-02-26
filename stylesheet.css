@@ -1705,18 +1705,52 @@ audio {
 /* Hide birthday image initially */
 /* ================= Birthday Image Styling ================= */
 
+/* ===== FIX Birthday Image Size & Position ===== */
+
 .birthday-image {
-  display: none;              /* stays hidden until JS shows it */
+  display: none;                /* shown via JS */
   text-align: center;
-  margin-top: 0px;
+  margin: 25px 0 10px 0;
+  padding: 0;
 }
 
-.birthday-image img {
-  width: 100%;
-  max-width: 100px;           /* perfect size for mobile */
-  height: auto;
-  margin: -20 auto;
-  display: block;
+/* RESET paragraph behavior */
+.birthday-image {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  white-space: normal !important;
+  animation: none !important;
+}
 
+/* Image itself */
+.birthday-image img {
+  display: block;
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 220px;             /* ✅ perfect phone size */
+  height: auto;
+
+  /* smooth final reveal */
+  animation: birthdayFadeUp 1.8s ease forwards;
+}
+
+/* Entrance animation */
+@keyframes birthdayFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .birthday-image img {
+    max-width: 190px;
+  }
 }
 
