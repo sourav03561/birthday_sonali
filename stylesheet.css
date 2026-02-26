@@ -1708,14 +1708,14 @@ audio {
 .birthday-image {
   display: none;              /* stays hidden until JS shows it */
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .birthday-image img {
   width: 100%;
-  max-width: 260px;           /* perfect size for mobile */
+  max-width: 100px;           /* perfect size for mobile */
   height: auto;
-  margin: 0 auto;
+  margin: -20 auto;
   display: block;
 
 }
