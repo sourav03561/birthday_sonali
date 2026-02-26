@@ -1703,4 +1703,51 @@ audio {
 
 }
 /* Hide birthday image initially */
+/* ================= Birthday Image Styling ================= */
 
+.birthday-image {
+  display: none;              /* stays hidden until JS shows it */
+  text-align: center;
+  margin-top: 30px;
+}
+
+.birthday-image img {
+  width: 100%;
+  max-width: 260px;           /* perfect size for mobile */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+
+  /* soft, elegant entrance */
+  animation: birthdayFadeUp 2s ease forwards;
+}
+
+/* Animation */
+@keyframes birthdayFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= Mobile Fine Tuning ================= */
+
+@media (max-width: 768px) {
+  .birthday-image {
+    margin-top: 20px;
+  }
+
+  .birthday-image img {
+    max-width: 220px;        /* smaller for phones */
+  }
+}
+
+@media (max-width: 360px) {
+  .birthday-image img {
+    max-width: 200px;        /* very small phones */
+  }
+}
