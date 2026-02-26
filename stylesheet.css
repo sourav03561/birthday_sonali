@@ -1670,9 +1670,29 @@ audio {
 }
 
 /* Final birthday line – extra bold */
+/* ===== Calligraphy Happy Birthday Line ===== */
+
 .message p strong {
-  font-size: 44px;
-  font-weight: 700;
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  color: #e31b23;                 /* deep red like image */
+  letter-spacing: 2px;
+  line-height: 1.2;
+  display: inline-block;
+  padding: 10px 0;
+
+  /* smooth ink feel */
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,0.05),
+    2px 2px 0 rgba(0,0,0,0.04);
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .message p strong {
+    font-size: 40px;
+  }
 }
 
 /* Mobile tuning */
@@ -1681,7 +1701,4 @@ audio {
     font-size: 24px;
   }
 
-  .message p strong {
-    font-size: 30px;
-  }
 }
