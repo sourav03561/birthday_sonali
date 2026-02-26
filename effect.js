@@ -172,23 +172,31 @@ $('#cake_fadein').click(function(){
 		
 		var i;
 
-		function msgLoop (i) {
-			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
-			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
-			if(i==50){
-				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
-				});
-				
-			}
-			else{
-				msgLoop(i);
-			}			
+function msgLoop (i) {
+  $("p:nth-child("+i+")")
+    .fadeOut(1200)              // ⬅️ slower fade out
+    .delay(1800)                // ⬅️ longer pause
+    .promise()
+    .done(function(){
 
-		});
-			// body...
-		}
+      i = i + 1;
+
+      $("p:nth-child("+i+")")
+        .fadeIn(1500)            // ⬅️ slower fade in
+        .delay(2600);            // ⬅️ time to read
+
+      if (i == 50) {
+        $("p:nth-child(49)")
+          .fadeOut(2000)
+          .promise()
+          .done(function () {
+            $('.cake').fadeIn('slow');
+          });
+      } else {
+        msgLoop(i);
+      }
+    });
+}
 		
 		msgLoop(0);
 		
