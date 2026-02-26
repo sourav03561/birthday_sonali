@@ -1702,11 +1702,26 @@ audio {
   }
 
 }
+/* Hide birthday image initially */
 .birthday-image {
-  margin-top: 20px;
+  display: none;
+  margin-top: 30px;
   text-align: center;
 }
 
 .birthday-image img {
   max-width: 300px;
+  animation: fadeUp 2s ease forwards;
+}
+
+/* Soft entrance animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
