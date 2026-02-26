@@ -1702,3 +1702,11 @@ audio {
   }
 
 }
+.birthday-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.birthday-image img {
+  max-width: 300px;
+}
